@@ -17,10 +17,9 @@
 *****************
 
 [rewrite_local]
-^https:\/\/burn-chatfiles\.bldimg\.com\/burn_chatfiles\/users\/.*\/.*\.jpg!o\.png\?e url script-request-header https://raw.githubusercontent.com/anyehttp/quantumult-x/main/beta/hqtp.js
-^https:\/\/burn-chatfiles\.bldimg\.com\/burn_chatfiles\/users\/.*\/.*\.jpg url script-request-header https://raw.githubusercontent.com/anyehttp/quantumult-x/main/beta/hqtp.js
+^https:\/\/(burn-chatfiles)\.bldimg\.(com|cn)\/.*\/(ingfiles|burn_chatfiles\/(videos|users))\/.*\.(mp4|jpg|png).* url script-request-header https://raw.githubusercontent.com/ember-zhang/anyehttp/quantumult-x/main/beta/hqtp.js
 [mitm]
-hostname = burn-chatfiles.bldimg.com
+hostname = burn-chatfiles.bldimg.com, burn-chatfiles.bldimg.cn
 *****************/
 const $ = new Env("GOGOGOGO");
 let url = $request.url, headers = $request.headers;
